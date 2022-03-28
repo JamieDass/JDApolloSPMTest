@@ -10,6 +10,9 @@ let package = Package(
             targets: ["PDFTronCollaboration"])
     ],
     dependencies: [
+    .package(
+      url: "https://github.com/apollographql/apollo-ios.git",
+      .upToNextMajor(from: "0.9.5"))
         // Dependencies declare other packages that this package depends on.
     ],
     targets: [
