@@ -27,7 +27,8 @@ let package = Package(
                dependencies: [
                 .target(name: "PDFTronCollaboration"),
                 .product(name: "PDFTron", package: "pdftron-apple-package"),
-                .product(name: "Apollo", package: "apollo-ios")
+                .product(name: "Apollo", package: "apollo-ios"),
+                .product(name: "ApolloWebSocket", package: "apollo-ios")
                ]),
         .binaryTarget(
             name: "PDFTronCollaboration",
