@@ -14,7 +14,10 @@ let package = Package(
     dependencies: [
     .package(
       url: "https://github.com/apollographql/apollo-ios.git",
-      .upToNextMajor(from: "0.9.5"))
+      .upToNextMajor(from: "0.9.5")),
+    .package(
+      url: "https://github.com/PDFTron/pdftron-apple-package",
+      .upToNextMajor(from: "9.2.1"))
         // Dependencies declare other packages that this package depends on.
     ],
     targets: [
@@ -23,6 +26,7 @@ let package = Package(
         .target(name: "PDFTronCollab",
                dependencies: [
                 .target(name: "PDFTronCollaboration"),
+                .product(name: "PDFTron", package: "pdftron-apple-package"),
                 .product(name: "Apollo", package: "apollo-ios")
                ]),
         .binaryTarget(
